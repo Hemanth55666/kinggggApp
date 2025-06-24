@@ -4,18 +4,8 @@ import bcrypt from "bcryptjs";
 import cloudinary from "../lib/cloudinary.js";
 import jwt from "jsonwebtoken";
 
-export const generateToken = (userId, res) => {
-  const token = jwt.sign({ userId }, process.env.JWT_SECRET, {
-    expiresIn: "7d",
-  });
+import { generateToken } from "../lib/utils.js";
 
-  res.cookie("jwt", token, {
-    httpOnly: true,
-    secure: process.env.NODE_ENV === "production",
-    sameSite: "None", 
-    maxAge: 7 * 24 * 60 * 60 * 1000, 
-  });
-};
 
 
 export const signup = async (req, res) => {
