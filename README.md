@@ -1,42 +1,27 @@
-# ✨ Full Stack Realtime Chat App ✨
+# Chat App 💬
 
-![Demo App](/frontend/public/screenshot-for-readme.png)
+A full-stack real-time chat app built with:
 
-[Video Tutorial on Youtube](https://youtu.be/ntKkVrQqBYY)
+- ⚙️ Express.js & MongoDB (backend)
+- ⚡ Vite + React (frontend)
+- 🌐 Socket.IO (for real-time messaging)
 
-Highlights:
+## Features
 
-- 🌟 Tech stack: MERN + Socket.io + TailwindCSS + Daisy UI
-- 🎃 Authentication && Authorization with JWT
-- 👾 Real-time messaging with Socket.io
-- 🚀 Online user status
-- 👌 Global state management with Zustand
-- 🐞 Error handling both on the server and on the client
-- ⭐ At the end Deployment like a pro for FREE!
-- ⏳ And much more!
+- User authentication (signup/login)
+- Real-time messaging
+- Profile updates
+- Image upload via Cloudinary
 
-### Setup .env file
+## Getting Started
 
-```js
-MONGODB_URI=...
-PORT=5001
-JWT_SECRET=...
-
-CLOUDINARY_CLOUD_NAME=...
-CLOUDINARY_API_KEY=...
-CLOUDINARY_API_SECRET=...
-
-NODE_ENV=development
-```
-
-### Build the app
-
-```shell
-npm run build
-```
-
-### Start the app
-
-```shell
+```bash
+# Backend
+cd backend
+npm install
 npm start
-```
+
+# Frontend
+cd frontend
+npm install
+npm run dev
