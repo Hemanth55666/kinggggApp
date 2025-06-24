@@ -2,9 +2,11 @@ import mongoose from "mongoose";
 
 export const connectDB = async () => {
   try {
-    const conn = await mongoose.connect(process.env.MONGODB_URI);
-    console.log(`MongoDB connected: ${conn.connection.host}`);
+    await mongoose.connect(
+      "mongodb+srv://hemanth143:heman4444@cluster0.adau0p4.mongodb.net/fullstack-chat-app?retryWrites=true&w=majority"
+    );
+    console.log("✔ MongoDB connected successfully");
   } catch (error) {
-    console.log("MongoDB connection error:", error);
+    console.log("❌ MongoDB connection error:", error);
   }
 };

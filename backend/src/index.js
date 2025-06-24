@@ -12,6 +12,8 @@ import messageRoutes from "./routes/message.route.js";
 import { app, server } from "./lib/socket.js";
 
 dotenv.config();
+console.log("MONGO_URI from env:", process.env.MONGO_URI);
+
 
 const PORT = process.env.PORT;
 const __dirname = path.resolve();
